@@ -1,0 +1,70 @@
+site_name: 'YDIN'
+site_description: 'YDIN Digital Ideas Network'
+site_author: 'ydin'
+site_url: 'https://ydin.pages.dev'
+docs_dir: 'docs'
+
+theme:
+  name: material
+  language: zh
+  custom_dir: overrides
+  features:
+    - header.autohide
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - toc.integrate
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      primary: light green
+      accent: orange
+      scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-sp3 cheme: dark)"
+      primary: light blue
+      accent: pink
+      scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+nav:
+  - 'index.md'
+  - 'faq.md'
+  - 'about.md'
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - footnotes
+  - markdown_katex:
+      no_inline_svg: true
+      insert_fonts_css: true
+      macro-file: macros.tex
+
+extra:
+  disqus: ydin
+  social:
+    - icon: iconify/xmpp
+      name: Jabber / XMPP
+    - icon: iconify/matrix
+      name: Matrix
+    - icon: iconify/discord
+      name: discord
+  begin: 1619255590 # 2021/04/24 09:13:10
+
+plugins:
+  - search
+  - macros
+  - minify:
+      minify_html: true
+      minify_js: true
+      htmlmin_opts:
+        remove_comments: true
+  - roamlinks
+  #- rss
+  - print-site
