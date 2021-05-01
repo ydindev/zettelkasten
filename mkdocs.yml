@@ -36,6 +36,7 @@ nav:
   - 'index.md'
   - 'faq.md'
   - 'about.md'
+  - 'links.md'
 
 markdown_extensions:
   - toc:
